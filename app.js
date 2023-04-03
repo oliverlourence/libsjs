@@ -1,3 +1,13 @@
 import Liloo from './assets/liloo/liloo.js'
 
-new Liloo()
+axios.post('./bin/model.php', {
+    firstName: 'Santos',
+    lastName: 'Dumont'
+})
+    .then(function (response) {
+        console.log(response.data);
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
+
